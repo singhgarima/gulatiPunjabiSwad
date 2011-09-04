@@ -1,0 +1,32 @@
+<% title "Ration" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ration.name %>
+</p>
+<p>
+  <strong>Quantity:</strong>
+  <%= @ration.quantity %>
+</p>
+<p>
+  <strong>Units:</strong>
+  <%= @ration.units %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @ration.description %>
+</p>
+<p>
+  <strong>Last Finished On:</strong>
+  <%= @ration.last_finished_on %>
+</p>
+<p>
+  <strong>Last Purchased On:</strong>
+  <%= @ration.last_purchased_on %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_ration_path(@ration) %> |
+  <%= link_to "Destroy", @ration, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", rations_path %>
+</p>

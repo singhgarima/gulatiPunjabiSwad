@@ -1,0 +1,27 @@
+= stylesheet_link_tag "sweet_tabs/styles.css"
+
+%ul.tabContainer
+  %li
+    %a.tab.blue{ :href => root_path } 
+      = "Home"
+      %span.left
+      %span.right
+  %li
+    %a.tab.green{ :href => new_bill_path } 
+      = "Bills"
+      %span.left
+      %span.right
+  %li
+    %a.tab.red{ :href => rations_path } 
+      = "Ration"
+      %span.left
+      %span.right
+  %li
+    %a.tab.orange{ :href => menus_path } 
+      = "Menu"
+      %span.left
+      %span.right
+.clear
+
+.tabContent
+  .contentHolder

@@ -1,0 +1,15 @@
+one:
+  name: MyString
+  quantity: 1.5
+  units: MyString
+  description: MyText
+  last_finished_on: 2011-09-03 13:12:51
+  last_purchased_on: 2011-09-03 13:12:51
+
+two:
+  name: MyString
+  quantity: 1.5
+  units: MyString
+  description: MyText
+  last_finished_on: 2011-09-03 13:12:51
+  last_purchased_on: 2011-09-03 13:12:51

@@ -1,0 +1,12 @@
+- title "Bill"
+%p
+  %strong Name:
+  = @bill.name
+%p
+  %strong Total:
+  = @bill.total
+%p
+  = link_to "Edit", edit_bill_path(@bill)
+  |
+  \#{link_to "Destroy", @bill, :confirm => 'Are you sure?', :method => :delete} |
+  \#{link_to "View All", bills_path}
