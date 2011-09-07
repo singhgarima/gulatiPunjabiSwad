@@ -12,4 +12,6 @@ gem 'ruby_parser'
 gem 'sqlite3'
 gem "nifty-generators", :group => :development
 gem 'sass'
+gem 'jquery-rails'
 gem "mocha", :group => :test
+gem 'jrails'

@@ -1,0 +1,7 @@
+%tr
+  %td
+    = bcf.label :menu_id, "Menu: "
+    = bcf.select :menu_id, Menu.all.collect{ |m| [m.name, m.id]}, { :include_blank => true }
+  %td
+    = bcf.label :quantity
+    = bcf.text_field :quantity

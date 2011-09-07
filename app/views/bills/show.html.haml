@@ -1,7 +1,21 @@
 - title "Bill"
 %p
   %strong Name:
-  = @bill.name
+  = @bill.name || "------------"
+%br/
+%p
+  %strong Items Ordered:
+  %table
+    %tr
+      %th Item
+      %th Quantity
+      %th Unit Price
+    - @bill.bill_contents.each do |bill_content|
+      %tr
+        %td=bill_content.menu.name
+        %td=bill_content.quantity
+        %td=bill_content.menu.price
+%br/
 %p
   %strong Total:
   = @bill.total

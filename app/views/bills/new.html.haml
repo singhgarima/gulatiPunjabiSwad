@@ -1,4 +1,19 @@
-- title "New Bill"
-.bills
-  = render 'form'
-  %p= link_to "Back to List", bills_path
+= javascript_include_tag "bill_add_more_menus"
+
+= @bill.try(:errors).try(:full_messages)
+
+= form_tag bills_path, :class => "bill_contents" do
+  %p.Name
+    = label_tag "Customer's Name"
+    = text_field_tag "order[name]"
+  %p.o1
+    = label_tag "Order-1"
+    = select_tag "order[o1][menu]", options_from_collection_for_select(@menus, "id", "name")
+    = label_tag "Quantity"
+    = text_field_tag "order[o1][quantity]"
+  %p.o2
+    = label_tag "Order-2"
+    = select_tag "order[o2][menu]", options_from_collection_for_select(@menus, "id", "name")
+    = label_tag "Quantity"
+    = text_field_tag "order[o2][quantity]"
+  = submit_tag "Print Bill"

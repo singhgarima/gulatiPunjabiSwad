@@ -9,11 +9,15 @@
       %td
         = f.text_field :name
     %tr
-      %td
-        = f.label :menus
-      %td
-        = collection_select(:bill, :menu_ids, @menus, :id, :name, { :selected => @bill.menu_ids }, {:multiple => true, :menu => 'bill[menu_ids][]' })
-        %span#selected_list
+      %table
+        %h3 Order Placed
+        %tr#order_placed
+          = f.fields_for "bill_contents_attributes[0]", @bill.bill_contents.new do |bcf|
+            = render :partial =>  "bill_contents/bill_content", :locals => { :bcf => bcf }
+        %tr
+          %td
+            = add_form(f)
+          %td
     %tr
       %td
         = f.label :total

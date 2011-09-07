@@ -9,12 +9,22 @@ class BillsController < ApplicationController
 
   def new
     @menus = Menu.all
-    @bill = Bill.new
   end
 
   def create
-    @bill = Bill.new(params[:bill])
+    @bill = Bill.new(params[:order][:name])
+    order = params["order"]
+    order_keys = order.keys.collect{|key| key if key.match(/^o[\d]+$/).present? }
+    bill_contents = []
+    order_keys.each do |order_key|
+      bill_contents << BillContent.new(:menu_id => order[order_key][:menu], :quantity => order[order_key][:quantity]) if order_key
+    end
+
     if @bill.save
+      p bill_contents
+      @bill.bill_contents = bill_contents
+      @bill.save
+      p @bill.bill_contents
       redirect_to @bill, :notice => "Successfully created bill."
     else
       @menus = Menu.all
@@ -40,4 +50,5 @@ class BillsController < ApplicationController
     @bill.destroy
     redirect_to bills_url, :notice => "Successfully destroyed bill."
   end
+
 end

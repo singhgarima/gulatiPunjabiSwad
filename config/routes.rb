@@ -1,8 +1,6 @@
 GulatiPunjabiSwad::Application.routes.draw do
-  resources :bill_contents
 
   resources :rations
-
   resources :bills
   resources :homes
   resources :menus
@@ -57,6 +55,8 @@ GulatiPunjabiSwad::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
 
+  match "bill/menus" => "bill_contents#menus", :via => :get, :as => :bill_menus
+  match "bill/menus" => "bills#menus", :via => :post, :as => :bill_menus
   match "undefined" => "homes#undefined"
 
   root :to => "homes#index"

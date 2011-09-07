@@ -4,5 +4,11 @@ class Bill < ActiveRecord::Base
   has_many :bill_contents
   has_many :menus, :through => :bill_contents
 
-  validates_presence_of :name, :total
+  before_save :calculate_total
+
+  def calculate_total
+    return if bill_contents.blank?
+    self.total = 0
+    bill_contents.each{|bill_content| self.total += (bill_content.menu.price.to_f * bill_content.quantity.to_f); }
+  end
 end
