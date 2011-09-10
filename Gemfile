@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
-gem 'haml'
 gem 'haml-rails'
+gem 'haml'
 gem 'devise'
 gem 'will_paginate'
 gem 'formtastic'
@@ -15,3 +15,5 @@ gem 'sass'
 gem 'jquery-rails'
 gem "mocha", :group => :test
 gem 'jrails'
+gem "devise"
+

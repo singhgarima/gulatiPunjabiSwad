@@ -128,6 +128,9 @@ ul a.red{	background:url(../../images/sweet_tabs/red_mid.png) repeat-x top cente
 ul a.red span.left{ background:url(../../images/sweet_tabs/red_left.png) no-repeat left top;}
 ul a.red span.right{ background:url(../../images/sweet_tabs/red_right.png) no-repeat right top;}
 
+ul a.yellow{	background:url(../../images/sweet_tabs/yellow_mid.png) repeat-x top center;	color:#6f0100;}
+ul a.yellow{	byellow span.left{ background:url(../../images/sweet_tabs/yellow_left.png) no-repeat left top;}
+ul a.yellow{	byellow span.right{ background:url(../../images/sweet_tabs/yellow_right.png) no-repeat right top;}
 
 /* The hover states: */
 ul a:hover{	background-position:bottom center; text-decoration:none;}

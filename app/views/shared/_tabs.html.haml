@@ -21,6 +21,11 @@
       = "Menu"
       %span.left
       %span.right
+  %li
+    %a.tab.yellow{ :href => (user_signed_in? ? destroy_user_session_path : user_session_path)} 
+      = ( user_signed_in? ? "SignOut" : "SignIn")
+      %span.left
+      %span.right
 .clear
 
 .tabContent

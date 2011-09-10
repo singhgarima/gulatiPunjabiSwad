@@ -6,14 +6,15 @@ $(document).ready(function(){
 	}
 	
 	/* The available colors for the tabs: */
-	var colors = ['blue','green','red','orange'];
+	var colors = ['blue','green','red','orange', 'yellow'];
 	
 	/* The colors of the line above the tab when it is active: */
 	var topLineColor = {
 		blue:'lightblue',
 		green:'lightgreen',
 		red:'red',
-		orange:'orange'
+		orange:'orange',
+    yellow:'yellow'
 	}
 	
 	/* Looping through the Tabs object: */

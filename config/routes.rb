@@ -1,5 +1,7 @@
 GulatiPunjabiSwad::Application.routes.draw do
 
+  devise_for :users
+
   resources :rations
   resources :bills
   resources :homes
