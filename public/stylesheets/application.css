@@ -86,3 +86,8 @@ table {
     padding: 8px; }
   table .odd {
     background: #e8edff; }
+
+.shared_links {
+  font-size: 16px;
+  margin: 5px;
+  padding: 5px; }
