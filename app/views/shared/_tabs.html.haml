@@ -26,6 +26,12 @@
       = ( user_signed_in? ? "SignOut" : "SignIn")
       %span.left
       %span.right
+  - if user_signed_in? and current_user.admin
+    %li
+      %a.tab.white{ :href => users_path } 
+        = "Users"
+        %span.left
+        %span.right
 .clear
 
 .tabContent

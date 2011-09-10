@@ -58,6 +58,7 @@ GulatiPunjabiSwad::Application.routes.draw do
   # just remember to delete public/index.html.
 
   match "bill/menus" => "bill_contents#menus", :via => :get, :as => :bill_menus
+  match "/users" => "homes#users", :via => :get, :as => :users
   match "bill/menus" => "bills#menus", :via => :post, :as => :bill_menus
   match "undefined" => "homes#undefined"
 

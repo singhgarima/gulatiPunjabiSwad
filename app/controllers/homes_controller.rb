@@ -4,4 +4,8 @@ class HomesController < ApplicationController
     render "public/404.html"
   end
 
+  def users
+    @users = User.all
+  end
+
 end

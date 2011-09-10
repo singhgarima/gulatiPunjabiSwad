@@ -1,0 +1,11 @@
+- title "Users"
+
+%table
+  %tr
+    - User.fields.each do |column_name|
+      %td
+        = column_name
+  - @users.each_with_index do |user, index|
+    %tr{ :class => table_row_class(index) }
+      - user.field_values.each do |column_value|
+        %td= column_value

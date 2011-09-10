@@ -8,7 +8,7 @@
     %th Last Finished On
     %th Last Purchased On
   - @rations.each_with_index do |ration, index|
-    %tr{ :class => (index.odd? ? "even" : "odd") }
+    %tr{ :class => table_row_class(index) }
       %td= ration.name
       %td= ration.quantity
       %td= ration.units
