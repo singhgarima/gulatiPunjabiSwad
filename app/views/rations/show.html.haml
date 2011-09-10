@@ -1,0 +1,24 @@
+- title "Ration"
+%p
+  %strong Name:
+  = @ration.name
+%p
+  %strong Quantity:
+  = @ration.quantity
+%p
+  %strong Units:
+  = @ration.units
+%p
+  %strong Description:
+  = @ration.description
+%p
+  %strong Last Finished On:
+  = @ration.last_finished_on
+%p
+  %strong Last Purchased On:
+  = @ration.last_purchased_on
+%p
+  = link_to "Edit", edit_ration_path(@ration)
+  |
+  \#{link_to "Destroy", @ration, :confirm => 'Are you sure?', :method => :delete} |
+  \#{link_to "View All", rations_path}

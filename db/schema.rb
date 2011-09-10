@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110903075828) do
+ActiveRecord::Schema.define(:version => 20110909170649) do
 
   create_table "bill_contents", :force => true do |t|
     t.integer  "bill_id"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(:version => 20110903075828) do
     t.float    "quantity"
     t.string   "units"
     t.text     "description"
-    t.datetime "last_finished_on"
-    t.datetime "last_purchased_on"
+    t.date     "last_finished_on"
+    t.date     "last_purchased_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

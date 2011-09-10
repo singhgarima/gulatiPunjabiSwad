@@ -1,0 +1,21 @@
+- title "Rations"
+%table
+  %tr
+    %th Name
+    %th Quantity
+    %th Units
+    %th Description
+    %th Last Finished On
+    %th Last Purchased On
+  - @rations.each_with_index do |ration, index|
+    %tr{ :class => (index.odd? ? "even" : "odd") }
+      %td= ration.name
+      %td= ration.quantity
+      %td= ration.units
+      %td= ration.description
+      %td= ration.last_finished_on
+      %td= ration.last_purchased_on
+      %td= link_to "Show", ration
+      %td= link_to "Edit", edit_ration_path(ration)
+      %td= link_to "Destroy", ration, :confirm => 'Are you sure?', :method => :delete
+%p= link_to "New Ration", new_ration_path

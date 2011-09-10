@@ -60,3 +60,29 @@ a {
     margin: 8px 10px; }
   .error_messages ul {
     margin: 0; }
+
+form p {
+  padding: 4px;
+  margin: 4px; }
+
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px;
+  width: 480px;
+  text-align: left;
+  border: 1px solid black;
+  margin: 20px; }
+  table tr {
+    border: 1px solid black; }
+  table th {
+    border: 1px solid black;
+    font-size: 14px;
+    font-weight: normal;
+    color: #003399;
+    padding: 10px 8px; }
+  table td {
+    border: 1px solid black;
+    color: #666699;
+    padding: 8px; }
+  table .odd {
+    background: #e8edff; }

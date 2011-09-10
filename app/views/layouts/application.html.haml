@@ -5,16 +5,17 @@
     %title
       = yield(:title) || "Untitled"
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
-    = stylesheet_link_tag "application", "bills"
-    = javascript_include_tag "jquery.min.js", "jquery_ujs.js"
+    = stylesheet_link_tag "application", "bills", "jquery-ui-1.8.16.custom"
+    = javascript_include_tag "jquery.min.js", "jquery_ujs.js", "jquery-ui-1.8.16.custom.min.js"
+    = javascript_include_tag "application"
     -# = javascript_include_tag "sweet_tabs/script"
     = csrf_meta_tag
     = yield(:head)
 
   %body
-    #header
-      = render :partial => "shared/tabs"
     #container
+      #header
+        = render :partial => "shared/tabs"
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
 

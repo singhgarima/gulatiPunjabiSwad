@@ -1,0 +1,27 @@
+= form_for @ration do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br/
+    = f.text_field :name
+  %p
+    = f.label :quantity
+    %br/
+    = f.text_field :quantity
+  %p
+    = f.label :units
+    %br/
+    = f.text_field :units
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+  %p
+    = f.label :last_finished_on
+    %br/
+    = f.text_field :last_finished_on, :class => "date_picker"
+  %p
+    = f.label :last_purchased_on
+    %br/
+    = f.text_field :last_purchased_on, :class => "date_picker"
+  %p= f.submit
