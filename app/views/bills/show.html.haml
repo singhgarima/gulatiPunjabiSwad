@@ -11,10 +11,11 @@
       %th Quantity
       %th Unit Price
     - @bill.bill_contents.each do |bill_content|
-      %tr
-        %td=bill_content.menu.name
-        %td=bill_content.quantity
-        %td=bill_content.menu.price
+      - if bill_content.quantity.to_i != 0
+        %tr
+          %td=bill_content.menu.name
+          %td=bill_content.quantity
+          %td=bill_content.menu.price
 %br/
 %p
   %strong Total:
