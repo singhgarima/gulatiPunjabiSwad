@@ -1,0 +1,15 @@
+- title "Menus"
+%table
+  %tr
+    %th Name
+    %th Price
+    %th Category
+  - for menu in @menus
+    %tr
+      %td= menu.name
+      %td= menu.price
+      %td= menu.category
+      %td= link_to "Show", menu
+      %td= link_to "Edit", edit_menu_path(menu)
+      %td= link_to "Destroy", menu, :confirm => 'Are you sure?', :method => :delete
+%p= link_to "New Menu", new_menu_path
