@@ -3,7 +3,9 @@ GulatiPunjabiSwad::Application.routes.draw do
   devise_for :users
 
   resources :rations
-  resources :bills
+  resources :bills do
+    get 'print'
+  end
   resources :homes
   resources :menus
 

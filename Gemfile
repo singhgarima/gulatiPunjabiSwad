@@ -16,4 +16,3 @@ gem 'jquery-rails'
 gem "mocha", :group => :test
 gem 'jrails'
 gem "devise"
-

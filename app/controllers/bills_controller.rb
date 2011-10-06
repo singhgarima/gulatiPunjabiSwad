@@ -1,4 +1,5 @@
 class BillsController < ApplicationController
+
   def index
     @bills = Bill.all
   end
@@ -43,6 +44,11 @@ class BillsController < ApplicationController
     else
       render :action => 'edit'
     end
+  end
+
+  def print
+    @bill = Bill.find(params[:bill_id])
+    render :layout => 'print_layout'
   end
 
   def destroy

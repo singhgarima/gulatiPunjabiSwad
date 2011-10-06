@@ -1,0 +1,22 @@
+.print
+  - title "Bills No #{@bill.id}"
+  %p
+    %strong Name:
+    = @bill.name || "------------"
+  %p
+    %strong Items Ordered:
+    %table
+      %tr
+        %th Item
+        %th Quantity
+        %th Unit Price
+      - @bill.bill_contents.each do |bill_content|
+        - if bill_content.quantity.to_i != 0
+          %tr
+            %td=bill_content.menu.name
+            %td=bill_content.quantity
+            %td=bill_content.menu.price
+      %tr
+        %td Total
+        %td =
+        %td= @bill.total

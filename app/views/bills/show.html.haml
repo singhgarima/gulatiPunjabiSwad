@@ -1,3 +1,5 @@
+= javascript_include_tag "jquery.printPage.js"
+
 - title "Bills No #{@bill.id}"
 %p
   %strong Name:
@@ -20,8 +22,17 @@
 %p
   %strong Total:
   = @bill.total
+%br/
+%p
+  = link_to "Print", bill_print_path(@bill.id), :class => "btnPrint"
 %p
   = link_to "Edit", edit_bill_path(@bill)
   |
   \#{link_to "Destroy", @bill, :confirm => 'Are you sure?', :method => :delete} |
   \#{link_to "View All", bills_path}
+
+:javascript
+  $(document).ready(function() {
+    $(".btnPrint").printPage();
+  });
+
