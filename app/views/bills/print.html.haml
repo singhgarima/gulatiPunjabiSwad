@@ -1,11 +1,11 @@
-.print
+.print{ :style => "color:#888"}
   - title "Bills No #{@bill.id}"
-  %p
+  %p{ :style => "text-align:left" }
     %strong Name:
     = @bill.name || "------------"
   %p
     %strong Items Ordered:
-    %table
+    %table{ :style => "border:1px solid #888;margin:8px;width:230px"}
       %tr
         %th Item
         %th Quantity
@@ -17,6 +17,6 @@
             %td=bill_content.quantity
             %td=bill_content.menu.price
       %tr
+        %td &nbsp;
         %td Total
-        %td =
         %td= @bill.total

@@ -4,9 +4,10 @@
   %head
     = stylesheet_link_tag "print"
   %body
-    #print_container
+    #print_container{:style => "text-align:center;width:250px;"}
       #header
-        %h1 Gulati Punjabi Swad
-      #print_body
+        %h1{ :style => "border-bottom:1px solid #888;font-size:12px;" }
+          Gulati Punjabi Swad
+      #print_body{ :style => "font-size:8px" }
         = yield
 
