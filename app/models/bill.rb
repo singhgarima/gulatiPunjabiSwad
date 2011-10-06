@@ -10,7 +10,7 @@ class Bill < ActiveRecord::Base
     return if bill_contents.blank?
     self.total = 0
     bill_contents.each{|bill_content| self.total += (bill_content.menu.price.to_f * bill_content.quantity.to_f); }
-    self.total = self.total + (self.total * Vat.lastest_tax_rate)
+    self.total = self.total + (self.total * Vat.lastest_tax_rate).ceil
   end
 
   def vat_value
