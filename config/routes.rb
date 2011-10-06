@@ -1,5 +1,7 @@
 GulatiPunjabiSwad::Application.routes.draw do
 
+  resources :vats
+
   devise_for :users
 
   resources :rations

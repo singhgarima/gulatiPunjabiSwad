@@ -1,0 +1,9 @@
+- title "Vat"
+%p
+  %strong Tax:
+  = @vat.tax
+%p
+  = link_to "Edit", edit_vat_path(@vat)
+  |
+  \#{link_to "Destroy", @vat, :confirm => 'Are you sure?', :method => :delete} |
+  \#{link_to "View All", vats_path}

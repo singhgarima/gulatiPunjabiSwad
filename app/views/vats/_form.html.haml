@@ -1,0 +1,7 @@
+= form_for @vat do |f|
+  = f.error_messages
+  %p
+    = f.label :tax
+    %br/
+    = f.text_field :tax
+  %p= f.submit

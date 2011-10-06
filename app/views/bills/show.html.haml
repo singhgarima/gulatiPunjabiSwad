@@ -18,10 +18,14 @@
           %td=bill_content.menu.name
           %td=bill_content.quantity
           %td=bill_content.menu.price
-%br/
-%p
-  %strong Total:
-  = @bill.total
+    %tr
+      %td &nbsp;
+      %td Vat
+      %td= @bill.vat_value
+    %tr
+      %td &nbsp;
+      %th Total:
+      %th= @bill.total
 %br/
 %p
   = link_to "Print", bill_print_path(@bill.id), :class => "btnPrint"
