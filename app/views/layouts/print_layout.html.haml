@@ -2,11 +2,10 @@
 %html
 
   %head
-    = stylesheet_link_tag "print"
   %body
     #print_container{:style => "text-align:center;width:250px;"}
       #header
-        %h1{ :style => "border-bottom:1px solid #888;font-size:12px;" }
+        %h1{ :style => "border-bottom:1px solid #888;font-size:10px;" }
           Gulati Punjabi Swad
       #print_body{ :style => "font-size:8px" }
         = yield
