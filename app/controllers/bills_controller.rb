@@ -9,7 +9,7 @@ class BillsController < ApplicationController
   end
 
   def new
-    @menus = Menu.all
+    @menus = Menu.order("category").order("id").all
   end
 
   def create

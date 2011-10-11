@@ -5,8 +5,24 @@
   %body
     #print_container{:style => "text-align:center;width:250px;"}
       #header
-        %h1{ :style => "border-bottom:1px solid #888;font-size:10px;" }
-          Gulati Punjabi Swad
+        %h1{ :style => "border-bottom:1px solid #888;font-size:10px;margin-bottom:2px;" }
+          Gulati's Punjabi Swad
+        %table.address{ :style => "margin-top:2px" }
+          %tr{ :style => "font-size:6px; text-align:left;" }
+            %td{ :style => "float:left; margin-right: 42px;" }
+              SC-90 Sunrise Jaipuria
+              %br/
+              Indirapuram
+            %td{ :style => "float:left; margin-right: 42px;" }
+              TIN: 09365705111
+            %td{ :style => "float:right" }
+              G8/3 Savitri Mkt
+              %br/
+              Sector 18, Noida
       #print_body{ :style => "font-size:8px" }
         = yield
+      #footer{ :style => "font-size:6px" }
+        Thanks for your order
+        %br/
+        We provide free home delivery
 

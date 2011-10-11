@@ -1,6 +1,9 @@
 .print{ :style => "color:#888"}
   - title "Bills No #{@bill.id}"
-  %p{ :style => "text-align:left" }
+  %p{ :style => "text-align:left;" }
+    %strong Bill No:
+    = @bill.id
+    %br/
     %strong Name:
     = @bill.name || "------------"
   %p
@@ -10,17 +13,21 @@
         %th Item
         %th Quantity
         %th Unit Price
+        %th Total Price
       - @bill.bill_contents.each do |bill_content|
         - if bill_content.quantity.to_i != 0
           %tr
             %td=bill_content.menu.name
             %td=bill_content.quantity
             %td=bill_content.menu.price
+            %td=(bill_content.menu.price * bill_content.quantity)
       %tr
         %td &nbsp;
-        %td Vat
+        %td &nbsp;
+        %td= "Vat (#{Vat.last.tax}%)"
         %td= @bill.vat_value
       %tr
+        %td &nbsp;
         %td &nbsp;
         %td Total
         %td= @bill.total

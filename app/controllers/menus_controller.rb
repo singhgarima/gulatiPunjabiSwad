@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
   def index
-    @menus = Menu.all
+    @menus = Menu.order("category").order("id").all
   end
 
   def new
